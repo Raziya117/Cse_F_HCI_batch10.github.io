@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positive or negative numbers</title>
+    <script>
+        function verify()
+        { var a;
+            a=document.getElementById("num").value;
+            if(a>=0)
+            {
+                document.writeln("The given number "  +a+  " is Positive");
+
+            }
+        
+            else{
+                document.writeln("The given number "  +a+  " is Negative");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h2>Number is Positive or Negative</h2>
+    <table>
+        <tr>
+            <td>Enter a number:</td>
+            <td><input type="text" id="num"></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <input type="button" value="check" onclick="verify()">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+    <script>
+        function armstrong()
+        {
+            var x,arm=0,m,num;
+       
+            num =parseInt(document.getElementById("n").value);
+            m=num;
+            while(num>0){
+            x=num%10;
+            arm=arm+x*x*x;
+            num=parseInt(num/10);
+            }
+         
+		if(arm== m)
+		{
+			window.alert("The given number "+m+ " is Armstrong");
+		}
+		else
+		{
+			window.alert("The given number "+m+ " is not a Armstrong");
+		}
+          
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Armstrong or not</h1>
+    Enter a number:<input type="text" id="n">
+    <input type="button" value="check" onclick="armstrong()">
+</body>
+</html>

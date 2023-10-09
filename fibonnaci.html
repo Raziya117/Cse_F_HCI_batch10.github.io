@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of two numbers</title>
+    <script>
+        function fibonacci()
+        {
+            var n1=0,n2=1,t,i;
+       
+            num =parseInt(document.getElementById("n").value);
+            document.write("The fibonacci series..")
+            while(n1<=num)
+            {
+               document.write(" <br> " +  n1);  
+                 t= n1 + n2; 
+      
+               n1 = n2;   
+               n2 =t;
+            } 
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Fibonacci series</h1>
+    Enter a number:<input type="text" id="n">
+    <input type="button" value="check" onclick="fibonacci()">
+</body>
+</html>

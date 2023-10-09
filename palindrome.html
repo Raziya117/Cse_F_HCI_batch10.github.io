@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+    <script>
+        function palindrome()
+        {
+            var x,rev=0,m,num;
+       
+            num =parseInt(document.getElementById("n").value);
+            m=num;
+            while(num>0){
+            x=num%10;
+             rev=rev*10+x;
+            num=parseInt(num/10);
+            }
+         
+		if(rev== m)
+		{
+			window.alert("The given number "+m+ " is Palindrome");
+		}
+		else
+		{
+			window.alert("The given number "+m+ " is not a Palindrome");
+		}
+          
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Palindrome or not</h1>
+    Enter a number:<input type="text" id="n">
+    <input type="button" value="check" onclick="palindrome()">
+</body>
+</html>
