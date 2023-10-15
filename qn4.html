@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZ</title>
+    <script>
+        function result4()
+        {
+            document.getElementById("res4").innerHTML="<font color=red>Please select an option</font>";
+            var ele=document.getElementsByName('capital');
+            
+            for(i=0;i<ele.length;i++)
+            {
+            if(ele[i].checked)
+            {
+                if(ele[i].value=="Hyderabad")
+                {
+            document.getElementById("res4").innerHTML="<font color=green>Correct</font>";
+                }
+            else
+            {
+                document.getElementById("res4").innerHTML="<font color=red>Incorrect</font>";
+            }
+        }
+      }
+     }            
+    </script>
+</head>
+<body>
+    <fieldset style="background-color:lightpink;">
+        <h3>4. What is the capital of Telangana ?</h3>
+        <input type="radio" name="capital" value="Warangal">Warangal<br>
+        <input type="radio" name="capital" value="kammam">kammam<br>
+        <input type="radio" name="capital" value="Hyderabad">Hyderabad<br>
+        <input type="radio" name="capital" value="karimnagar">karimnagar<br><br>
+        <input type="button" value="submit" onclick="result4()">
+        <div id="res4"></div>
+    </fieldset>
+</body>
+</html>

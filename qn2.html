@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZ</title>
+    <script>
+        function result2()
+        {
+            var ele=document.getElementsByName('number');
+            document.getElementById("res").innerHTML="<font color=red>Please select an option</font>";
+            for(i=0;i<ele.length;i++)
+            {
+            if(ele[i].checked)
+            {
+                if(ele[i].value=="Blue jay")
+                {
+            document.getElementById("res2").innerHTML="<font color=green>Correct</font>";
+                }
+            else
+            {
+                document.getElementById("res2").innerHTML="<font color=red>Incorrect</font>";
+            }
+        }
+      }
+     }             
+    </script>
+</head>
+<body>
+    <fieldset style="background-color:aqua;">
+        <h3>2.What is the state bird of telangana?</h3>
+        <input type="radio" name="number" value="parrot">Parrot<br>
+        <input type="radio" name="number" value="peacock">Peacock<br>
+        <input type="radio" name="number" value="crow">Crow<br>
+        <input type="radio" name="number" value="Blue jay">Blue jay<br><br>
+        <input type="button" value="submit" onclick="result2()">
+        <div id="res2"></div>
+    </fieldset>
+</body>
+</html>

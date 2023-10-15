@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZ</title>
+    <script>
+        function result3()
+        {
+            var ele=document.getElementsByName('number');
+            document.getElementById("res3").innerHTML="<font color=red>Please select an option</font>";
+            for(i=0;i<ele.length;i++)
+            {
+            if(ele[i].checked)
+            {
+                if(ele[i].value=="10")
+                {
+            document.getElementById("res3").innerHTML="<font color=green>Correct</font>";
+                }
+            else
+            {
+                document.getElementById("res3").innerHTML="<font color=red>Incorrect</font>";
+            }
+        }
+      }
+     }       
+    </script>
+</head>
+<body>
+    <fieldset style="background-color:lightgoldenrodyellow;">
+        <h3>3. 3 * 2 + 4=___</h3>
+        <input type="radio" name="number" value="10">10<br>
+        <input type="radio" name="number" value="7">7<br>
+        <input type="radio" name="number" value="18">18<br>
+        <input type="radio" name="number" value="16">16<br><br>
+        <input type="button" value="submit" onclick="result3()">
+        <div id="res3"></div>
+    </fieldset>
+</body>
+</html>

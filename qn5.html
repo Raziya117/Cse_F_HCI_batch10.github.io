@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZ</title>
+    <script>
+function result5()
+        {
+            document.getElementById("res5").innerHTML="<font color=red>Please select an option</font>";
+            var ele=document.getElementsByName('flower');
+            
+            for(i=0;i<ele.length;i++)
+            {
+            if(ele[i].checked)
+            {
+                if(ele[i].value=="Tangedu")
+                {
+            document.getElementById("res5").innerHTML="<font color=green>Correct</font>";
+                }
+            else
+            {
+                document.getElementById("res5").innerHTML="<font color=red>Incorrect</font>";
+            }
+        }
+      }
+     }                
+    </script>
+</head>
+<body>
+    <fieldset style="background-color:lightyellow;">
+    <h3>5.What is the state flower of Telangana?</h3>
+<input type="radio" name="flower" value="Tangedu">Tangedu<br>
+<input type="radio" name="flower" value="Rose">Rose<br>
+<input type="radio" name="flower" value="Gunugu">Gunugu<br>
+<input type="radio" name="flower" value="Marigold">Marigold<br><br>
+<input type="button" value="submit" onclick="result5()">
+<div id="res5"></div>
+</fieldset>
+</body>
+</html>
